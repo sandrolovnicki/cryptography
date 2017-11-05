@@ -1,6 +1,6 @@
 # Problem 3
 
-In problem1_ciphertext.txt is a ciphertext obtained with Vigenere's cipher from open text on Croatian language. Find length of the keyword, keyword itself and decrypt the text.
+Find the key K in Hill's cipher if m=2 and pair (open text, ciphertext) is known.
 
 ## Example usage:
 
