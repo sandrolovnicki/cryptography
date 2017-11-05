@@ -11,7 +11,7 @@ g++ problem1.cpp -o p1
 open text ? VERNAM
 ciphertext? BJKDIW	
 
-matrix equation AK=b for 0. and 2. pair of letters:
+matrix equation AK=b for pairs of letters starting at index 0 and 2:
 |21  4| |k1 k2|  =  |1   9|
 |17 13| |k3 k4|     |10  3|
 

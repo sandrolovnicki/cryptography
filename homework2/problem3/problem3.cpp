@@ -50,7 +50,7 @@ public:
         first2 = _first2;
         second2 = _second2;
 
-        std::cout << "matrix equation AK=b for pairs of letters starting at index" << first2 << " and " << second2 << ":" << std::endl;
+        std::cout << "matrix equation AK=b for pairs of letters starting at index " << first2 << " and " << second2 << ":" << std::endl;
         std::cout << "|" << openText[first2+0]-'A' << ((openText[first2+0]-'A')<10?"  ":" ") << ((openText[first2+1]-'A')<10?" ":"") << openText[first2+1]-'A' << "| |k1 k2|  =  |" << ciphertext[first2+0]-'A' << ((ciphertext[first2+0]-'A')<10?"  ":" ") << ((ciphertext[first2+1]-'A')<10?" ":"") << ciphertext[first2+1]-'A' << "|" << std::endl;
         std::cout << "|" << openText[second2+0]-'A' << ((openText[second2+0]-'A')<10?"  ":" ") << ((openText[second2+1]-'A')<10?" ":"") << openText[second2+1]-'A' << "| |k3 k4|     |" << ciphertext[second2+0]-'A' << ((ciphertext[second2+0]-'A')<10?"  ":" ") << ((ciphertext[second2+1]-'A')<10?" ":"") << ciphertext[second2+1]-'A' << "|" << std::endl;
     }
