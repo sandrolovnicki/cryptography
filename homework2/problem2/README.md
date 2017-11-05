@@ -1,5 +1,7 @@
 # Problem 2
 
+Given a key word and open text, obtain the Playfair's ciphertext
+
 ## Example usage:
 
 ```

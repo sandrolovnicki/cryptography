@@ -8,7 +8,7 @@
  *
  * Project: Cryptography and Network Security, Homework2, Problem2
  * Task:    In problem1_ciphertext.txt is a ciphertext obtained with Vigenere's cipher from open text on Croatian language.
- *       Find length of the keyword, keyword itself and decrypt the text.
+ *          Find length of the keyword, keyword itself and decrypt the text.
  *
  * Build: g++ problem1.cpp -o problem1_exe
  * Run: ./problem1_exe

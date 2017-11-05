@@ -1,5 +1,7 @@
 # Problem 1
 
+In problem1_ciphertext.txt is a ciphertext obtained with Vigenere's cipher from open text on Croatian language. Find length of the keyword, keyword itself and decrypt the text.
+
 ## Example usage:
 
 ```
