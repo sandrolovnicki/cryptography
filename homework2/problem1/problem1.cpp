@@ -21,7 +21,7 @@
 
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include <iomanip>
 #include <cstdlib>
 
 
@@ -82,6 +82,7 @@ public:
             }
             first = "";
         }
+	std::cout << std::endl;
     }
 
     void createMatrix(int m)
@@ -110,10 +111,8 @@ public:
             }
             for (int i = 0; i < 26; i++)
                 ic += frequencies[i].second * (frequencies[i].second - 1);
-            std::cout << "  Ic = " << ic / (columns * (columns - 1)) << std::endl;
+            std::cout << "  I_c = " << ic / (columns * (columns - 1)) << std::endl;
         }
-
-        std::cout << std::endl;
     }
 
     void calculateMhs()
@@ -130,20 +129,23 @@ public:
             for(int i=0; i<columns; i++)
                 frequencies[matrix[j][i]-'A'].second++;
             max = 0.0;
+		std::cout << "for j=" << j << ", M_gs are:" << std::endl;
             for(g=0; g<26; g++) {
                 mg = 0.0;
                 for(int i=0; i<26; i++)
                     mg += frequencies[i].first * frequencies[(i-g+26)%26].second;
                 mg /= columns;
+		std::cout << std::fixed << std::setprecision(6) << mg << " ";
+		if((g+1)%7==0) std::cout << std::endl;
                 if(mg > max) {
                     max = mg;
                     h = g;
                 }
             }
             key += 'A'+ (-h+26)%26;
-            std::cout << "for j=" << j << ", M_h=" << max << " and h=" << h << std::endl;
+            std::cout << std::endl << " => M_h=" << max << " and h=" << std::fixed << std::setprecision(6) << h << std::endl << std::endl;
         }
-        std::cout << std::endl << "key: " << key << std::endl;
+        std::cout << "key: " << key << std::endl;
     }
 
     void decrypt(std::string _key)
@@ -174,8 +176,6 @@ private:
 
 int main()
 {
-    std::cout << std::endl;
-
     Vigenere v("problem1_ciphertext.txt", "croatian_letters_p.txt");
 
     v.Kasiski();
