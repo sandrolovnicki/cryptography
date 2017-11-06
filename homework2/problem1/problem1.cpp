@@ -136,7 +136,7 @@ public:
                     mg += frequencies[i].first * frequencies[(i-g+26)%26].second;
                 mg /= columns;
 		std::cout << std::fixed << std::setprecision(6) << mg << " ";
-		if((g+1)%7==0) std::cout << std::endl;
+		if((g+1)%10==0) std::cout << std::endl;
                 if(mg > max) {
                     max = mg;
                     h = g;
